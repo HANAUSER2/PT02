@@ -1,0 +1,31 @@
+ID: PR02
+_schema-version: '2.1'
+description: PROJECT 02
+version: 0.0.1
+
+modules:
+ - name: PR02_HDB
+   type: hdb
+   path: PR02_HDB
+   requires:
+    - name: hdi_PR02_HDB
+
+ 
+
+resources:
+ - name: hdi_PR0J
+   parameters:
+      config:
+         schema: PR02_CONT
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: hdi_PR02_HDB
+   parameters:
+      config:
+         schema: PR02_CONT
+   properties:
+      hdi-container-name_2: ${service-name}
+   type: com.sap.xs.hdi-container
+

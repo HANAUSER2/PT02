@@ -1,0 +1,21 @@
+{
+  "role": {
+    "name": "PR02::ROLE1",
+    "object_privileges": [
+      {
+        "name": "PR02::CBD_CUSTOMER",
+        "type": "VIEW",
+        "privileges": [
+          "UNMASKED"
+        ]
+      }
+    ],
+    "schema_analytic_privileges": [
+      {
+        "privileges": [
+          "PR02::AP2_USD"
+        ]
+      }
+    ]
+  }
+}

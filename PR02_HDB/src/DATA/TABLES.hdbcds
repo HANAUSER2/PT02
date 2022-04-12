@@ -1,0 +1,137 @@
+namespace PR02;
+
+entity MAT_MAST {
+    MATID     : String(18);
+    MAT_GROUP : String(9);
+    MAT_TYPE  : String(4);
+    OLD_MATID : String(18);
+    PLANT     : String(10);
+    COMP_CODE : String(10);
+};
+
+entity CUST_TEMP {
+    CUSTID    : String(10);
+    CUSTNAME  : String(20);
+    DATE_FROM : LocalDate;
+    DATE_TO   : LocalDate;
+    DEPT      : String(2);
+}
+
+entity ORDERS_TARGET {
+    ORDER_NO   : String(10);
+    YEAR1      : String(10);
+    MONNTH     : String(2);
+    QUARTER1   : String(2);
+    NO_DAYS    : Decimal(10, 2);
+    AMT        : Decimal(10, 2);
+    VAR_AMOUNT : Decimal(17, 2);
+    CURRENCY   : String(10);
+}
+
+entity ORDERS2 {
+    ORDID      : String(10);
+    ORDER_DATE : LocalDate;
+    REQ_DATE   : LocalDate;
+    CUSTID     : String(10);
+    MATID      : String(18);
+    EMPID      : String(10);
+    ORDER_QTY  : Decimal(17, 2);
+    UNIT       : String(3);
+    PRICE      : Decimal(17, 2);
+    CURRENCY   : String(5);
+    YR         : String(4);
+};
+
+entity MJ_SALES {
+    key ORDER_ID : Integer;
+        CUSTOMER : String(2);
+        AMOUNT   : Decimal(10, 2);
+};
+
+entity MJ_CUSTOMERS {
+    key CUSTOMER_ID   : String(2);
+        CUSTOMER_NAME : String(10);
+        COUNTRY       : String(2);
+};
+
+entity MJ_COUNTRIES {
+    key COUNTRY_ID   : String(2);
+        COUNTRY_NAME : String(15);
+        REGION       : String(10);
+};
+
+entity CUST_TRANS {
+    CUSTID     : String(10);
+    TRANS_DATE : LocalDate;
+    REVENUE    : Integer;
+}
+
+entity RANK_DATA {
+    COUNTRY : String(10);
+    PRODUCT : String(10);
+    SALES   : Integer;
+};
+
+entity ORDERS {
+    ORDID      : String(10);
+    ORDER_DATE : LocalDate;
+    REQ_DATE   : LocalDate;
+    CUSTID     : String(10);
+    MATID      : String(18);
+    EMPID      : String(10);
+    ORDER_QTY  : Decimal(17, 2);
+    UNIT       : String(3);
+    PRICE      : Decimal(17, 2);
+    CURRENCY   : String(5);
+    YR         : String(4);
+};
+
+entity ORDERS_HOT {
+    ORDID      : String(10);
+    ORDER_DATE : LocalDate;
+    REQ_DATE   : LocalDate;
+    CUSTID     : String(10);
+    MATID      : String(18);
+    EMPID      : String(10);
+    ORDER_QTY  : Decimal(17, 2);
+    UNIT       : String(3);
+    PRICE      : Decimal(17, 2);
+    CURRENCY   : String(5);
+    YR         : String(4);
+};
+
+entity ORDERS_COLD {
+    ORDID      : String(10);
+    ORDER_DATE : LocalDate;
+    REQ_DATE   : LocalDate;
+    CUSTID     : String(10);
+    MATID      : String(18);
+    EMPID      : String(10);
+    ORDER_QTY  : Decimal(17, 2);
+    UNIT       : String(3);
+    PRICE      : Decimal(17, 2);
+    CURRENCY   : String(5);
+    YR         : String(4);
+};
+
+entity MAT_TXT {
+    MATID    : String(18);
+    SPRAS    : String(1);
+    MAT_TEXT : String(50);
+};
+
+entity CUST_MAST {
+    CUST_ID     : String(10);
+    CUST_NAME   : String(40);
+    REGION      : String(10);
+    COUNTRY     : String(10);
+    EMAILID     : String(30);
+    CREDIT_CARD : String(10);
+};
+
+entity EMP {
+    NODE_ID   : String(10);
+    PARENT_ID : String(10);
+    FROM_DATE : LocalDate;
+    TO_DATE   : LocalDate;
+};
